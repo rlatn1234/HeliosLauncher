@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
-  "version": "1.8.0",
-  "productName": "Helios Launcher",
+  "name": "rmclauncher",
+  "version": "1.0.0",
+  "productName": "rMC Launcher",
   "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "author": "Daniel Scalzi (https://github.com/rlatn1234/)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "https://github.com/rlatn1234/rMCLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/rlatn1234/rMCLauncher/issues"
   },
   "private": true,
   "main": "index.js",
@@ -41,12 +41,12 @@
     "winreg": "^1.2.4"
   },
   "devDependencies": {
-    "electron": "^15.2.0",
+    "electron": "^13.6.3",
     "electron-builder": "^22.13.1",
     "eslint": "^8.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/rlatn1234/rMCLauncher.git"
   }
 }

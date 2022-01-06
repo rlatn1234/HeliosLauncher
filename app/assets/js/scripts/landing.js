@@ -118,7 +118,7 @@ document.getElementById('settingsMediaButton').onclick = (e) => {
 // Bind avatar overlay button.
 document.getElementById('avatarOverlay').onclick = (e) => {
     prepareSettings()
-    switchView(getCurrentView(), VIEWS.settings, 500, 500, () => {
+    switchView(getCurrentView(), VIEWS.settings, 250 , 250,  () => {
         settingsNavItemListener(document.getElementById('settingsNavAccount'), false)
     })
 }
@@ -153,10 +153,10 @@ function updateSelectedServer(serv){
 }
 // Real text is set in uibinder.js on distributionIndexDone.
 server_selection_button.innerHTML = '\u2022 Loading..'
-server_selection_button.onclick = (e) => {
+/*server_selection_button.onclick = (e) => {
     e.target.blur()
     toggleServerSelection(true)
-}
+}*/
 
 // Update Mojang Status Color
 const refreshMojangStatuses = async function(){
@@ -217,6 +217,7 @@ const refreshMojangStatuses = async function(){
     document.getElementById('mojang_status_icon').style.color = Mojang.statusToHex(status)
 }
 
+
 const refreshServerStatus = async function(fade = false){
     loggerLanding.log('Refreshing Server Status')
     const serv = DistroManager.getDistribution().getServer(ConfigManager.getSelectedServer())
@@ -255,6 +256,9 @@ refreshMojangStatuses()
 // Set refresh rate to once every 5 minutes.
 let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 300000)
 let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
+
+
+setTimeout(() => refreshMojangStatuses(true), 1000) //workaround to make sure statuses are correctly shown, else its a kinda broken
 
 /**
  * Shows an error overlay, toggles off the launch area.
